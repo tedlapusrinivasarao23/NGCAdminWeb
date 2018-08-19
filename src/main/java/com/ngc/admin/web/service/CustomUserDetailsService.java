@@ -43,7 +43,7 @@ public class CustomUserDetailsService implements UserDetailsService{
 	private User addContactByOwnerNumber(String email) {
 
 		User addContactDbLists = (User) hibernateTemplate
-				.find("from User where email = ? or ssoId = ?", new Object[] { email,email }).get(0);
+				.find("from User where email = ? or phoneNumber = ?", new Object[] { email,email }).get(0);
 		hibernateTemplate.flush();
 		hibernateTemplate.clear();
 		return addContactDbLists;
