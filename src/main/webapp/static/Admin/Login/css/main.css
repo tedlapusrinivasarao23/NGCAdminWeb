@@ -3,7 +3,7 @@ body {
 }
 
 .container--blue {
-  background-image: .url('Vector\ Smart\ Object.png');
+  background-image: url('../../../images/VectorSmartObject.png');
   background-color: #2d4591;
   background-repeat: no-repeat;
   background-size: cover;

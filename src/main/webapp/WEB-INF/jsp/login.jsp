@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
     crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
-  <link rel="stylesheet" href="<c:url value='/static/css/main.css' />">
+  <link rel="stylesheet" href="<c:url value='/static/Admin/Login/css/main.css' />">
   <title>Near Geo Contacts Login</title>
 </head>
 
@@ -89,7 +89,7 @@
   </div>
 
   </div>
-  <script src="<c:url value='/static/js/index.js' />"></script>
+  <script src="<c:url value='/static/Admin/Login/js/index.js' />"></script>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
