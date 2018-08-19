@@ -33,13 +33,13 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 	  http.authorizeRequests()
-	  	.antMatchers("/home/**").permitAll()
+	  	.antMatchers("/","/home").permitAll()
 	  	.antMatchers("/admin/**").access("hasRole('ADMIN')")
 	  	.antMatchers("/db/**").access("hasRole('ADMIN') and hasRole('DBA')")
 	  	.and().formLogin().loginPage("/login")
 	  	.defaultSuccessUrl("/admin")
 		.failureUrl("/login?error")
-	  	.usernameParameter("ssoId").passwordParameter("password")
+	  	.usernameParameter("phoneNumber").passwordParameter("password")
 	  	.and().rememberMe().rememberMeParameter("remember-me").tokenRepository(persistentTokenRepository()).tokenValiditySeconds(86400)
 	  	.and().logout().logoutSuccessUrl("/login?logout");/*
 	  	.and().csrf()

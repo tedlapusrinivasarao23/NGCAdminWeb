@@ -25,7 +25,7 @@ public class User {
 	@Column(name="id")
 	private int id;
 
-	@Column(name="SSO_ID", unique=true, nullable=false)
+	@Column(name="SSO_ID",nullable=false)
 	private String ssoId;
 	
 	@Column(name="PASSWORD", nullable=false)
@@ -39,6 +39,9 @@ public class User {
 
 	@Column(name="EMAIL", nullable=false)
 	private String email;
+	
+	@Column(name="phoneNumber", unique=true, nullable=false)
+	private String phoneNumber;
 
 	@Column(name="STATE", nullable=false)
 	private String state=State.ACTIVE.getState();

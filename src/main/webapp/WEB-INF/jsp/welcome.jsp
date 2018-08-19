@@ -7,7 +7,7 @@
 <title>HelloWorld page</title>
 </head>
 <body>
-	Greeting : ${greeting}
-	This is a welcome page.
+	<h1>Greeting : ${greeting}
+	This is a welcome page.</h1>
 </body>
 </html>

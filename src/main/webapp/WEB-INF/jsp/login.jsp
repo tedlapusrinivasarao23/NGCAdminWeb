@@ -65,8 +65,8 @@
 									<p>${message}</p>
 								</div>
 							</c:if>
-                <input type="text" class="form-content__body__input " id="username" name="ssoId" placeholder="Username" required="required"/>
-                <input type="password" class="form-content__body__input" id="password" name="password" placeholder="********" required="required"/>
+                <input type="text" class="form-content__body__input " id="phoneNumber" name="phoneNumber" placeholder="Enter Phone/EmailID" required="required"/>
+                <input type="password" class="form-content__body__input" id="password" name="password" placeholder="******" required="required"/>
                 <br/>
                 <span class="form-content__body__label">
                   <input type="checkbox" class="form-content__body__checkbox" /> Remember me
