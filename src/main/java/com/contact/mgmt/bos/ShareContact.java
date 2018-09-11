@@ -1,4 +1,4 @@
-package com.ngc.admin.web.rest.bos;
+package com.contact.mgmt.bos;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
