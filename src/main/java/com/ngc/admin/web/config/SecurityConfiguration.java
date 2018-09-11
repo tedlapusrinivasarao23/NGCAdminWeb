@@ -41,9 +41,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 		.failureUrl("/login?error")
 	  	.usernameParameter("phoneNumber").passwordParameter("password")
 	  	.and().rememberMe().rememberMeParameter("remember-me").tokenRepository(persistentTokenRepository()).tokenValiditySeconds(86400)
-	  	.and().logout().logoutSuccessUrl("/login?logout");/*
-	  	.and().csrf()
-	  	.and().exceptionHandling().accessDeniedPage("/Access_Denied");
+	  	.and().logout().logoutSuccessUrl("/login?logout")
+	  	.and().csrf().disable();
+	  	
+	  /*	.and().exceptionHandling().accessDeniedPage("/Access_Denied");
 	  */	
 	}
 	

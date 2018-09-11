@@ -16,11 +16,13 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.hibernate4.HibernateTemplate;
 import org.springframework.orm.hibernate4.HibernateTransactionManager;
 import org.springframework.orm.hibernate4.LocalSessionFactoryBean;
+import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
 @EnableTransactionManagement
-@ComponentScan({ "com.ngc.admin.web" })
+@ComponentScan({ "com.ngc.admin.web","com.contact.mgmt.service","com.contact.mgmt.dao", "com.contact.mgmt.mappers" })
+@EnableScheduling
 @PropertySource(value = { "classpath:application.properties" })
 public class RootConfigContext {
 
@@ -51,7 +53,7 @@ public class RootConfigContext {
 	public SessionFactory sessionFactory() {
 		LocalSessionFactoryBean lsfb = new LocalSessionFactoryBean();
 		lsfb.setDataSource(getDataSource());
-		lsfb.setPackagesToScan(new String[] {"com.ngc.admin.web.rest.bos","com.ngc.admin.web.model"});
+		lsfb.setPackagesToScan(new String[] {"com.ngc.admin.web.rest.bos","com.ngc.admin.web.model","com.contact.mgmt.bos","com.contact.mgmt.sharedbos"});
 		lsfb.setHibernateProperties(hibernateProperties());
 		try {
 			lsfb.afterPropertiesSet();

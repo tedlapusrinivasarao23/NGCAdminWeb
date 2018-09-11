@@ -12,7 +12,7 @@ import org.springframework.web.servlet.view.JstlView;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan({"com.ngc.admin.web.config","com.ngc.admin.web.controller"})
+@ComponentScan({"com.ngc.admin.web.config","com.contact.mgmt.controller","com.ngc.admin.web.controller"})
 public class WebMvcConfig extends WebMvcConfigurerAdapter {
 	
 	@Bean
